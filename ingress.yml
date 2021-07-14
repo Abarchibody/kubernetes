@@ -1,0 +1,11 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: b2b
+spec:
+  rules:
+    - http: 10.1.255.6
+      paths:
+        - backend:
+            serviceName: admin-svc
+            port: 8081

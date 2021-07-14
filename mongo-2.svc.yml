@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongo-svc
+spec:
+  type: ExternalName
+  externalName: localhost # The connexion url
+################################################################
+# use mongodb://<dbuser>:<dbpassword>@mongo-svc:<port>/dbname #
+##############################################################
