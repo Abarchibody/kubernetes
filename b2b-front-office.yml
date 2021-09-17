@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: front-office
-          image: 826609325644.dkr.ecr.eu-west-1.amazonaws.com/front-office
+          image: 826609325644.dkr.ecr.eu-west-1.amazonaws.com/front-office:latest
           ports:
             - containerPort: 80
 
