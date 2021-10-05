@@ -36,25 +36,4 @@ spec:
       protocol: TCP
       port: 80
       targetPort: 80
-      nodePort: 30000
-# ---
-# apiVersion: networking.k8s.io/v1
-# kind: Ingress
-# metadata:
-#   name: b2b-test
-#   annotations:
-#     kubernetes.io/ingress.class: alb
-#     alb.ingress.kubernetes.io/scheme: internet-facing
-#     alb.ingress.kubernetes.io/target-type: ip
-# spec:
-#   rules:
-#     - host: k8s.b2b-firstandfuture.com
-#       http:
-#         paths:
-#           - path: /
-#             pathType: Prefix
-#             backend:
-#               service:
-#                 name: nginx
-#                 port:
-#                   number: 80
+      # nodePort: 30000
