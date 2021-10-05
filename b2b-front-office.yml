@@ -45,6 +45,8 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: b2b-front-office
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
     - host: k8s.b2b-firstandfuture.com
