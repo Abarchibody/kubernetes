@@ -4,7 +4,7 @@ metadata:
   name: mongo-svc
 spec:
   type: ExternalName
-  externalName: localhost # The connexion url
+  externalName: mongodb://b2b:TqMzARSKB9NwkQQJs3Vm@10.1.2.6:27017 # The connexion url
 ################################################################
 # use mongodb://<dbuser>:<dbpassword>@mongo-svc:<port>/dbname #
 ##############################################################
