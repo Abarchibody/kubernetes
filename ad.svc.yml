@@ -4,4 +4,4 @@ metadata:
   name: ad-svc
 spec:
   type: ExternalName
-  externalName: ldap://10.1.0.10
+  externalName: 10.1.0.10
