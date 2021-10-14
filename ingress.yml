@@ -14,14 +14,14 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: front-office-svc
+                name: app-svc
                 port:
                   number: 80
           - path: /admin
             pathType: Prefix
             backend:
               service:
-                name: back-office-svc
+                name: admin-svc
                 port:
                   number: 80
           - path: /api/ppaid
