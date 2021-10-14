@@ -3,8 +3,8 @@ kind: Ingress
 metadata:
   name: ingress-dev
   annotations:
-    alb.ingress.kubernetes.io/target-type: ip
-    nginx.ingress.kubernetes.io/rewrite-target: /
+    # alb.ingress.kubernetes.io/target-type: ip
+    # nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   defaultBackend:
     service:
