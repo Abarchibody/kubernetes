@@ -14,7 +14,7 @@ kind: Service
 metadata:
   name: mongo-svc
 spec:
-  type: ClusterIP
+  # type: ClusterIP
   ports:
     - port: 27017
       targetPort: 27017
