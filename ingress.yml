@@ -14,7 +14,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: nginx-svc
+                name: app-svc
                 port:
                   number: 80
     - host: k8s.b2b-firstandfuture.com
@@ -24,6 +24,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: front-office
+                name: admin-svc
                 port:
                   number: 80
