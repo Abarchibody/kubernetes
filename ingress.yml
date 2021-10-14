@@ -4,7 +4,7 @@ metadata:
   name: ingress-dev
   annotations:
     alb.ingress.kubernetes.io/target-type: ip
-    # nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
     - host: k8s.b2b-firstandfuture.com
