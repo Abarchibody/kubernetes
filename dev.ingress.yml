@@ -35,7 +35,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: notif-svc
+                name: ppaid-svc
                 port:
                   number: 3000
           - path: /api/notif
