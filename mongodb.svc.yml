@@ -4,4 +4,4 @@ metadata:
   name: mongo
 spec:
   type: ExternalName
-  externalName: mongo
+  externalName: b2b.mongo.com
