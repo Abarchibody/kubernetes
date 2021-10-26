@@ -57,5 +57,5 @@ metadata:
     app: mongo
 type: Opaque
 data:
-  username: YjJC # echo -n 'b2B' | base64
-  password: cGFzc3dvcmQ= # echo -n 'password' | base64
+  username: b2b # echo -n 'b2b' | base64
+  password: TqMzARSKB9NwkQQJs3Vm # echo -n 'password' | base64
