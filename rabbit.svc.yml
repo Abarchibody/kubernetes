@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: redis-svc
+  name: rabbit-svc
 spec:
   ports:
     - protocol: TCP
@@ -12,7 +12,7 @@ spec:
 apiVersion: v1
 kind: Endpoints
 metadata:
-  name: redis-svc
+  name: rabbit-svc
 subsets:
   - addresses:
       - ip: 10.1.1.8
