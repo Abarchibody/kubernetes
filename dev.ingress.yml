@@ -22,14 +22,6 @@ spec:
                 name: app-svc
                 port:
                   number: 80
-
-          - path: /admin
-            pathType: Prefix
-            backend:
-              service:
-                name: admin-svc
-                port:
-                  number: 80
           - path: /api/ppaid
             pathType: Prefix
             backend:
@@ -100,3 +92,13 @@ spec:
                 name: logs-svc
                 port:
                   number: 3007
+    - host: admin.k8s.b2b-firstandfuture.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: admin-svc
+                port:
+                  number: 80
