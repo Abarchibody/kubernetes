@@ -4,9 +4,7 @@ metadata:
   name: mongo
 spec:
   type: ExternalName
-  ports:
-    - name: mongo
-      port: 27017
+  externalName: mongo
 
 ---
 apiVersion: v1
