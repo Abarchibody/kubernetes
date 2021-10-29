@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: mongo
 spec:
-  Type: ExternalName
+  clusterIP: None
   ports:
     - name: mongo
       port: 27017
