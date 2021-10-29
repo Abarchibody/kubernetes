@@ -8,11 +8,7 @@ spec:
       protocol: TCP
       port: 27017
       targetPort: 27017
-      nodePort: 0
-
-##############################
-# use mongodb://mongo/dbname #
-##############################
+      nodePort: 27017
 
 ---
 apiVersion: v1
