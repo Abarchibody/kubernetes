@@ -4,7 +4,7 @@ metadata:
   name: mongo
 spec:
   type: ExternalName
-  externalName: mongo
+  externalName: b2b-firstandfuture.com
 
 ---
 apiVersion: v1
