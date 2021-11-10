@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: mongo-ext
+  name: mongo
 spec:
   type: ExternalName
   externalName: b2b.mongo.com
