@@ -15,6 +15,6 @@ metadata:
   name: mongo
 subsets:
   - addresses:
-      - ip: 10.1.2.6
+      - ip: 10.1.2.60
     ports:
       - port: 27017
