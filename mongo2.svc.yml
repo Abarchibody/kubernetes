@@ -3,13 +3,10 @@ kind: Service
 metadata:
   name: mongo
 spec:
-  clusterIP: None
+  # type: NodePort
   ports:
     - port: 27017
-
-##############################
-# use mongodb://mongo/dbname #
-##############################
+      targetPort: 27017
 
 ---
 apiVersion: v1
@@ -20,5 +17,4 @@ subsets:
   - addresses:
       - ip: 10.1.2.6
     ports:
-      - name: mongo
-        port: 27017
+      - port: 27017
