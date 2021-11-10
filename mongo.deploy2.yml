@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mongo-deploy2
+  name: mongo3
   labels:
-    app: mongo
+    app: mongo3
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: mongo
+      app: mongo3
   template:
     metadata:
       labels:
-        app: mongo
+        app: mongo3
     spec:
       containers:
-        - name: mongo
+        - name: mongo3
           image: mongo:3
           ports:
             - containerPort: 27017
@@ -35,12 +35,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: mongo-svc2
+  name: mongo3
   labels:
-    service: mongo
+    service: mongo3
 spec:
   selector:
-    app: mongo
+    app: mongo3
   ports:
     - name: http
       protocol: TCP
@@ -51,9 +51,9 @@ spec:
 apiVersion: v1
 kind: Secret
 metadata:
-  name: mongo-secret2
+  name: mongo3-secret2
   labels:
-    app: mongo
+    app: mongo3
 type: Opaque
 data:
   username: YjJi # echo -n 'b2b' | base64

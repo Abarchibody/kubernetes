@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mongo-deploy
+  name: mongo5
   labels:
-    app: mongo
+    app: mongo5
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: mongo
+      app: mongo5
   template:
     metadata:
       labels:
-        app: mongo
+        app: mongo5
     spec:
       containers:
-        - name: mongo
+        - name: mongo5
           image: mongo:5
           ports:
             - containerPort: 27017
@@ -23,25 +23,25 @@ spec:
             - name: MONGO_INITDB_ROOT_USERNAME
               valueFrom:
                 secretKeyRef:
-                  name: mongo-secret
+                  name: mongo5-secret
                   key: username
             - name: MONGO_INITDB_ROOT_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: mongo-secret
+                  name: mongo5-secret
                   key: password
 
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: mongo-svc
+  name: mongo5
   labels:
-    service: mongo
+    service: mongo5
 spec:
   type: LoadBalancer
   selector:
-    app: mongo
+    app: mongo5
   ports:
     - name: http
       protocol: TCP
@@ -52,9 +52,9 @@ spec:
 apiVersion: v1
 kind: Secret
 metadata:
-  name: mongo-secret
+  name: mongo5-secret
   labels:
-    app: mongo
+    app: mongo5
 type: Opaque
 data:
   username: YjJi # echo -n 'b2b' | base64
