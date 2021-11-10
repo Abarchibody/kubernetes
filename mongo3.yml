@@ -23,12 +23,12 @@ spec:
             - name: MONGO_INITDB_ROOT_USERNAME
               valueFrom:
                 secretKeyRef:
-                  name: mongo-secret2
+                  name: mongo3-secret
                   key: username
             - name: MONGO_INITDB_ROOT_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: mongo-secret2
+                  name: mongo3-secret
                   key: password
 
 ---
@@ -39,6 +39,7 @@ metadata:
   labels:
     service: mongo3
 spec:
+  type: LoadBalancer
   selector:
     app: mongo3
   ports:
@@ -51,7 +52,7 @@ spec:
 apiVersion: v1
 kind: Secret
 metadata:
-  name: mongo3-secret2
+  name: mongo3-secret
   labels:
     app: mongo3
 type: Opaque
