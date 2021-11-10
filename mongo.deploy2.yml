@@ -39,7 +39,6 @@ metadata:
   labels:
     service: mongo
 spec:
-  type: LoadBalancer
   selector:
     app: mongo
   ports:
